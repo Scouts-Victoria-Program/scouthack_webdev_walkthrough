@@ -1,6 +1,12 @@
 .heading_a {
-    color: orange;
+    color: rgb(200, 100, 109);
+    font-family: "Courier New";
 }
 .heading_b {
+    color: green;
     font-family: Impact;
+}
+.heading_c {
+    color: #ffc90c;
+    font-family: Georgia;
 }
