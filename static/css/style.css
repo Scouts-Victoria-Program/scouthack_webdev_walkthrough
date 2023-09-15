@@ -13,3 +13,12 @@
 #div_third_content h3 {
     color: salmon;
 }
+body {
+    background-color: #ffc90c;
+}
+.container {
+    background-color: white;
+}
+.btn-primary {
+    background-color: purple;
+}
