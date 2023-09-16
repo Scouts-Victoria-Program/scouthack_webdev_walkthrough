@@ -14,5 +14,10 @@ def my_page():
     return render_template("my-page.html")
 
 
+@app.get("/hello/")
+def hello():
+    return render_template("hello.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=80, host="0.0.0.0")
