@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block header_title %}
+Scorpion Patrol's Program Adventure
+{% endblock %}
+{% block content %}
+<form method="post">
+    <div class="mb-3">
+        <label for="author_input" class="form-label">Author</label>
+        <input type="text" id="author_input" name="author" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="idea_input" class="form-label">Idea</label>
+        <textarea id="idea_input" name="idea" class="form-control"></textarea>
+    </div>
+    <input type="submit" name="submit" class="btn btn-success" value="Share Idea!">
+</form>
+{% endblock %}

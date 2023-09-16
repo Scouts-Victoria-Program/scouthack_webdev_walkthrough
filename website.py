@@ -20,5 +20,10 @@ def hello(name=None):
     return render_template("hello.html", name=name)
 
 
+@app.get("/program/new")
+def new_program():
+    return render_template("new_program.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=80, host="0.0.0.0")
