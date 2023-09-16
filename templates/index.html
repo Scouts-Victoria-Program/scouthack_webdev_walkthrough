@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scorpion Patrol</title>
     <link href="http://cdn.scouthack/bootstrap.min.css" rel="stylesheet">
-    <link href="static/css/style.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -17,8 +17,8 @@
             <header>
                 <!-- Put your menu links here -->
                 <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="my-page.html" target="_blank">My Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('my_page') }}" target="_blank">My Page</a></li>
                     <li class="nav-item"><a class="nav-link" href="">Program Ideas</a></li>
                 </ul>
             </header>
@@ -31,7 +31,7 @@
             <div id="div_first_content" class="row">
                 <div id="div_patrol_logo" class="col-3">
                     <!-- Put your Patrol logo here! -->
-                    <img src="static/img/scorpion.jpg" width="200px" height="200px">
+                    <img src="{{ url_for('static', filename='img/scorpion.jpg') }}" width="200px" height="200px">
                 </div>
                 <div id="div_headings_paragraphs" class="col-9">
                     <!-- Heading and Paragraphs -->
