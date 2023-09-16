@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.get("/")
 def home():
-    return render_template("index.html")
+    return render_template("patrol.html")
 
 
 @app.get("/my-page")
