@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block header_title %}
+Scorpion Patrol's Program Adventure
+{% endblock %}
+{% block content %}
+<h1>Programs <a href="{{ url_for('new_program') }}" class="btn btn-primary">Add program</a></h1>
+<ul>
+  {% for p in programs %}
+  <li><strong>{{p.author}}</strong>: {{p.idea}}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

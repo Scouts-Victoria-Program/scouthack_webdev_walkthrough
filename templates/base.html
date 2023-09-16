@@ -19,7 +19,7 @@
                 <ul class="nav nav-pills">
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('my_page') }}" target="_blank">My Page</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Program Ideas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('list_programs')}}">Program Ideas</a></li>
                 </ul>
             </header>
             {% endblock header %}

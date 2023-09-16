@@ -23,6 +23,20 @@ def hello(name=None):
     return render_template("hello.html", name=name)
 
 
+@app.get("/program")
+def list_programs():
+    programs = []
+    try:
+        with open(database) as csvfile:
+            csvreader = csv.DictReader(csvfile, fieldnames=fieldnames)
+            for row in csvreader:
+                programs.append(row)
+    except FileNotFoundError:
+        pass
+
+    return render_template("program.html", programs=programs)
+
+
 @app.get("/program/new")
 def new_program():
     return render_template("new_program.html")
@@ -35,7 +49,7 @@ def new_program_post():
         csvwriter = csv.DictWriter(csvfile, fieldnames=fieldnames)
         csvwriter.writerow(program)
 
-    return redirect(url_for("new_program"))
+    return redirect(url_for("list_programs"))
 
 
 if __name__ == "__main__":
