@@ -13,7 +13,7 @@
 <body>
     <div id="div_content" class="container">
         <section>
-            <!--x block header x-->
+            {% block header %}
             <header>
                 <!-- Put your menu links here -->
                 <ul class="nav nav-pills">
@@ -22,11 +22,11 @@
                     <li class="nav-item"><a class="nav-link" href="">Program Ideas</a></li>
                 </ul>
             </header>
-            <!--x endblock header x-->
+            {% endblock header %}
         </section>
 
         <section>
-            <!--x block content x-->
+            {% block content %}
 
             <div id="div_first_content" class="row">
                 <div id="div_patrol_logo" class="col-3">
@@ -109,15 +109,15 @@
                 </div>
             </div>
 
-            <!--x endblock content x-->
+            {% endblock content %}
         </section>
 
         <section>
-            <!--x block footer x-->
+            {% block footer %}
             <footer>
                 <p>&copy; 2023 Your Name Here, made at ScoutHack!</p>
             </footer>
-            <!--x endblock footer x-->
+            {% endblock footer %}
         </section>
     </div>
 
